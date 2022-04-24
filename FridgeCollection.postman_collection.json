@@ -1,0 +1,399 @@
+{
+	"info": {
+		"_postman_id": "635896e6-5f8c-46c7-a49b-d2456e0fc91a",
+		"name": "FridgeCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"string\",\r\n  \"password\": \"string\"\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:5002/api/Auth/Login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"Auth",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registration",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQWRtaW5pc3RyYXRvciIsIm5iZiI6MTY1MDU3MzczNywiZXhwIjoxNjUwNTgwOTM3LCJpYXQiOjE2NTA1NzM3Mzd9.UGUddoVkzTvo6NXdFUJeh_-H2hqeUNjZW8RA-wSh9lH1870C66NgKwmMguBZw3Ss9LwS0gLOu96N1UIX-K6ihQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"string\",\r\n  \"name\": \"string\",\r\n  \"password\": \"string\"\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:5002/api/Auth/Registration",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"Auth",
+						"Registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetFridge",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQWRtaW5pc3RyYXRvciIsIm5iZiI6MTY1MDU3MzczNywiZXhwIjoxNjUwNTgwOTM3LCJpYXQiOjE2NTA1NzM3Mzd9.UGUddoVkzTvo6NXdFUJeh_-H2hqeUNjZW8RA-wSh9lH1870C66NgKwmMguBZw3Ss9LwS0gLOu96N1UIX-K6ihQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/Fridge/Get/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Fridge",
+						"Get",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateFridge",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQWRtaW5pc3RyYXRvciIsIm5iZiI6MTY1MDU3MzczNywiZXhwIjoxNjUwNTgwOTM3LCJpYXQiOjE2NTA1NzM3Mzd9.UGUddoVkzTvo6NXdFUJeh_-H2hqeUNjZW8RA-wSh9lH1870C66NgKwmMguBZw3Ss9LwS0gLOu96N1UIX-K6ihQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"string\",\r\n  \"fridgeModelId\": 0,\r\n  \"userId\": 0\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Fridge/Create",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Fridge",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateFridge",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQWRtaW5pc3RyYXRvciIsIm5iZiI6MTY1MDU3MzczNywiZXhwIjoxNjUwNTgwOTM3LCJpYXQiOjE2NTA1NzM3Mzd9.UGUddoVkzTvo6NXdFUJeh_-H2hqeUNjZW8RA-wSh9lH1870C66NgKwmMguBZw3Ss9LwS0gLOu96N1UIX-K6ihQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"name\": \"string\",\r\n  \"fridgeModelId\": 0,\r\n  \"userId\": 0\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Fridge/Update",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Fridge",
+						"Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteFridge",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQWRtaW5pc3RyYXRvciIsIm5iZiI6MTY1MDU3MzczNywiZXhwIjoxNjUwNTgwOTM3LCJpYXQiOjE2NTA1NzM3Mzd9.UGUddoVkzTvo6NXdFUJeh_-H2hqeUNjZW8RA-wSh9lH1870C66NgKwmMguBZw3Ss9LwS0gLOu96N1UIX-K6ihQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/Fridge/Delete/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Fridge",
+						"Delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQWRtaW5pc3RyYXRvciIsIm5iZiI6MTY1MDU3MzczNywiZXhwIjoxNjUwNTgwOTM3LCJpYXQiOjE2NTA1NzM3Mzd9.UGUddoVkzTvo6NXdFUJeh_-H2hqeUNjZW8RA-wSh9lH1870C66NgKwmMguBZw3Ss9LwS0gLOu96N1UIX-K6ihQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/Product/Get/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Product",
+						"Get",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQWRtaW5pc3RyYXRvciIsIm5iZiI6MTY1MDU3MzczNywiZXhwIjoxNjUwNTgwOTM3LCJpYXQiOjE2NTA1NzM3Mzd9.UGUddoVkzTvo6NXdFUJeh_-H2hqeUNjZW8RA-wSh9lH1870C66NgKwmMguBZw3Ss9LwS0gLOu96N1UIX-K6ihQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"string\",\r\n  \"defaultQuantity\": 0\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Product/Create",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Product",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQWRtaW5pc3RyYXRvciIsIm5iZiI6MTY1MDU3MzczNywiZXhwIjoxNjUwNTgwOTM3LCJpYXQiOjE2NTA1NzM3Mzd9.UGUddoVkzTvo6NXdFUJeh_-H2hqeUNjZW8RA-wSh9lH1870C66NgKwmMguBZw3Ss9LwS0gLOu96N1UIX-K6ihQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"name\": \"string\",\r\n  \"defaultQuantity\": 0\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Product/Update",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Product",
+						"Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQWRtaW5pc3RyYXRvciIsIm5iZiI6MTY1MDU3MzczNywiZXhwIjoxNjUwNTgwOTM3LCJpYXQiOjE2NTA1NzM3Mzd9.UGUddoVkzTvo6NXdFUJeh_-H2hqeUNjZW8RA-wSh9lH1870C66NgKwmMguBZw3Ss9LwS0gLOu96N1UIX-K6ihQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/Product/Delete/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Product",
+						"Delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

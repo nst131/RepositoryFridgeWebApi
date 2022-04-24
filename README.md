@@ -1,6 +1,6 @@
 Аунтефикация и Авторизация.
-2 roles: admin(login:admin@mail.ru  password:admin) и user.
-2 Databases: AuthFridgeDatabase and FridgeDatabase.
+Две роли: admin(login:admin@mail.ru  password:admin) и user.
+Две базы: AuthFridgeDatabase and FridgeDatabase.
 (FridgeDatabase) При запуске приложения создастся база данных и инициализирует основные данные.
 (AuthFridgeDatabase)(Необходимо сделать миграцию, использовал Identity, так же инициализирует основные данные).
 Auth отдельный сервис поэтому придется создать несколько клиентов (клиент автоматически создастся на основном приложении Fridge).
